@@ -24,6 +24,7 @@ from degree_checklist.views import (StudentRecordFormView, DegreeRecordFormView,
 
 
 urlpatterns = [
+    path('', views.main, name='main'),
     path('admin/', admin.site.urls),
     path('degree_checklist/student_list',
          views.student_list, name='student_list'),

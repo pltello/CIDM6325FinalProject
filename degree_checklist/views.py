@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.template import loader
 from django.conf import settings
 from .models import (Student, Degree, Core_Requirements,
                      University_Requirements, Department_Requirements,
@@ -150,3 +151,8 @@ class UploadFormView(FormView):
     def form_valid(self, form):
         form.save()
         return super().form_valid(form)
+
+
+def main(request):
+    template = loader.get_template('degree_checklist/base.html')
+    return HttpResponse(template.render())
