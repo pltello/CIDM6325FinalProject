@@ -27,7 +27,7 @@ class Dev(Configuration):
     SECRET_KEY = 'django-insecure-w3()$l^%wo4dkb22xs6xg-i^+dij*$jv7v8e_6p462g-2ba0mj'
 
     # SECURITY WARNING: don't run with debug turned on in production!
-    DEBUG = True
+    DEBUG = values.BooleanValue(True)
 
     ALLOWED_HOSTS = values.ListValue([])
 
