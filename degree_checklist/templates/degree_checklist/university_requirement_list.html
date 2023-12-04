@@ -1,0 +1,22 @@
+{% extends 'degree_checklist/base.html' %}
+
+{% block content %}
+<h1>Current University Requirements</h1>
+<h3>Total: {{ university_requirement_list|length }}</h3>
+<hr>
+<ul>
+    {% for item in university_requirement_list %}
+    <li>
+        <span>Univeristy Name: </span><span>{{ item.UniversityName }}</span>
+        <br>
+        <span>Univeristy Course ID: </span><span>{{ item.UniCourseID }}</span>
+        <br>
+        <span>Univeristy Course Name: </span><span>{{ item.UniCourseName }}</span>
+        <br>
+        <span>Years Required: </span><span>{{ item.YearsRequired }}</span>
+        <br>
+    </li>
+    <br>
+    {% endfor %}
+</ul>
+{% endblock %}

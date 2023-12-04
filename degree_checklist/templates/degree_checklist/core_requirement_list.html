@@ -1,0 +1,19 @@
+{% extends 'degree_checklist/base.html' %}
+
+{% block content %}
+<h1>Current Core Requirements</h1>
+<h3>Total: {{ core_requirement_list|length }}</h3>
+<hr>
+<ul>
+    {% for item in core_requirement_list %}
+    <li>
+        <span>Core Coure ID: </span> <span>{{ item.CoreCourseID }}</span>
+        <br>
+        <span>Core Course Name: </span><span>{{ item.CoreCourseName }}</span>
+        <br>
+        <span>Years Required: </span><span>{{ item.YearsRequired }}</span>
+    </li>
+    <br>
+    {% endfor %}
+</ul>
+{% endblock %}

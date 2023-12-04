@@ -1,0 +1,24 @@
+{% extends 'degree_checklist/base.html' %}
+
+{% block content %}
+<h1>Current Degrees</h1>
+<h3>Total: {{ degree_list|length }}</h3>
+<hr>
+<ul>
+    {% for item in degree_list %}
+    <li>
+        <span>Degree Name: </span> <span>{{ item.DegreeName }}</span>
+        <br>
+        <span>Degree Year: </span><span>{{ item.DegreeYear }}</span>
+        <br>
+        <span>University Name: </span><span>{{ item.UniversityName }}</span>
+        <br>
+        <span>Department Name: </span><span>{{ item.DepartmentName }}</span>
+        <br>
+        <span>Major Name: </span><span>{{ item.MajorName }}</span>
+        <br>
+    </li>
+    <br>
+    {% endfor %}
+</ul>
+{% endblock %}
